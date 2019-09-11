@@ -1,0 +1,37 @@
+/*creates an orange background*/
+html{
+    background-color: rgb(255, 128, 43);
+}
+
+/*Adds aqua borders to gif images*/
+.borders{
+    border: 5px;
+    border-color: aqua;
+    border-style: solid;
+}
+
+/*resizes images so that they do not take such a large portion of the screen*/
+img{
+    max-width: 300px;
+    max-height: 200px;
+}
+/*flexbox stuff to organize our results*/
+.lines {
+    margin-left: 75px;
+    margin-right: 75px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+/*Used to decorate and place our searchbar more neatly*/
+#search{
+    min-width: 200px;
+    min-height: 50px;
+    font-size: 45px;
+    position: absolute;
+    margin-left: 750px;
+    margin-top: -87px;
+}
+
+/*better cs and more fun things to come, but now to do the main objective at hand
+before adding too many extrordinary decorations*/
