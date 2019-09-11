@@ -1,30 +1,23 @@
-from random import choice, sample
-from flask import flask
-from flask import render_template
+from flask import Flask, render_template, request
+import requests
+import json
 
-app = flask(__name__)
-
-compliments = ['coolio', 'smashing', 'neato', 'fantabulous']
+app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Show the homepage and ask the user's name."""
-    section = 'BEW 1.1'
-    greeting = 'Good morning'
-    return render_template('gif-search.html'
-    section=section, greeting=greeting)
+    """Return homepage."""
+    # TODO: Extract query term from url
 
-@app.route('/compliment')
-def get_compliment():
-    """Give the user a compliment"""
-    name = request.args.get('name')
-    show_compliments = request.args.get('show_compliments')
-    compliment = choice(compliments)
-    compliments_to_show = sample(compliments, 3)
+    # TODO: Make 'params' dict with query term and API key
 
-    return render_template(
-        'gif-search.html',
-        name=name,
-        show_compliments=show_compliments,
-        compliment=compliment,
-        compliment=compliments_to_show)
+    # TODO: Make an API call to Tenor using the 'requests' library
+
+    # TODO: Get the first 10 results from the search results
+
+    # TODO: Render the 'index.html' template, passing the gifs as a named parameter
+
+    return render_template("index.html")
+
+if __name__ == '__main__':
+    app.run(debug=True)
